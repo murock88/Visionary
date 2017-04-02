@@ -9,12 +9,16 @@
                         <!-- Date/Time -->
         <p><span class="glyphicon glyphicon-time"></span> 
         <%= time_ago_in_words(article.created_at) %>
+        <br>
+        <%= image_tag article.user.image.url(:thumb), class: "img-circle" %>
         </p>
         
-
+   
         <!-- Author -->
         <p>
              Article By:<strong>  <%=  article.user.username %></strong>
+             
+              
         </p>
 
         <hr>
